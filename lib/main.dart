@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:placement/component/main_widget.dart';
 import 'package:placement/pages/Job/job_page.dart';
 import 'package:placement/pages/home/home_page.dart';
+import 'dart:async';
 
 void main() {
   runApp(const MyApp());
@@ -33,11 +34,61 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class  Placement extends StatelessWidget {
-  const  Placement({super.key});
+class Placement extends StatelessWidget {
+  const Placement({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MainWidget(0);
+    return SplashScreen();
+  }
+}
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 2), () {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => MainWidget(0)));
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return (Container(
+      color: Colors.blue,
+      height: double.infinity,
+      width: double.infinity,
+      child: Center(
+          child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "Place",
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 45,
+                color: Color.fromARGB(255, 255, 255, 255),
+                decoration: TextDecoration.none),
+          ),
+          Text(
+            "ment",
+            style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 45,
+                color: Color.fromARGB(255, 255, 255, 255),
+                decoration: TextDecoration.none),
+          )
+        ],
+      )),
+    ));
+    ;
   }
 }
