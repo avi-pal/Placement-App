@@ -91,11 +91,26 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           scrollDirection: Axis.vertical,
           children: [
-            InkWell(
-              child: Image.network(
-                  "https://media.geeksforgeeks.org/img-practice/courses/dsa_selfpaced_web.png"),
-              onTap: _launchURL,
+            // InkWell(
+            //   child: Image.network(
+            //       "https://media.geeksforgeeks.org/img-practice/courses/dsa_selfpaced_web.png"),
+            //   onTap: _launchURL,
+            // ),
+            Container(
+              color: Color.fromARGB(255, 172, 212, 245),
+              padding: EdgeInsets.all(10),
+              child: Align(
+                alignment: Alignment.topCenter,
+                child: Text(
+                  "Job ke liye no fikar",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
             ),
+
             SizedBox(
               height: 10,
             ),
@@ -103,7 +118,7 @@ class _HomePageState extends State<HomePage> {
               alignment: Alignment.center,
               child: Text(
                 "Internships",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
               ),
             ),
             SizedBox(
@@ -113,7 +128,7 @@ class _HomePageState extends State<HomePage> {
               alignment: Alignment.center,
               child: Text(
                 "Apply to 10,000+ internships for free",
-                style: TextStyle(fontSize: 24),
+                style: TextStyle(fontSize: 21),
               ),
             ),
             SizedBox(
@@ -125,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                 "POPULAR CITIES",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 22,
+                    fontSize: 20,
                     color: Colors.grey),
               ),
             ),
@@ -178,7 +193,7 @@ class _HomePageState extends State<HomePage> {
                 "POPULAR CATEGORIES",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 22,
+                    fontSize: 20,
                     color: Colors.grey),
               ),
             ),
@@ -239,7 +254,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => MainWidget(3)))
+                              builder: (context) => MainWidget(2)))
                     })),
             SizedBox(
               height: 10,
@@ -257,7 +272,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => MainWidget(2)))
+                              builder: (context) => MainWidget(1)))
                     })),
           ],
         ));

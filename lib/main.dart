@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:placement/component/main_widget.dart';
 import 'package:placement/pages/Job/job_page.dart';
+import 'package:placement/pages/account/account_page.dart';
 import 'package:placement/pages/home/home_page.dart';
 import 'dart:async';
 
@@ -63,7 +64,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return (Container(
-      color: Colors.blue,
+      color: Color.fromARGB(255, 42, 47, 79),
       height: double.infinity,
       width: double.infinity,
       child: Center(

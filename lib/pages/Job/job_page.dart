@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:placement/component/main_widget.dart';
+
 import 'package:placement/component/jobView.dart';
 
 class JobPage extends StatefulWidget {
@@ -13,12 +13,12 @@ class _JobPageState extends State<JobPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-          // color: Colors.lightBlue,
-          child: ListView.builder(
-        itemBuilder: (context, index) {
-          return JobView();
-        },
-        itemCount: 5,
-      ));
+        // color: Colors.lightBlue,
+        child: ListView.builder(
+      itemBuilder: (context, index) {
+        return JobView();
+      },
+      itemCount: 5,
+    ));
   }
 }

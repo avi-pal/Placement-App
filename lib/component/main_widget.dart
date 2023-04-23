@@ -18,7 +18,6 @@ class MainWidget extends StatefulWidget {
 class _MainWidgetState extends State<MainWidget> {
   static final List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    AccountPage(),
     JobPage(),
     InternshipPage(),
     MyHomePage(),
@@ -34,52 +33,91 @@ class _MainWidgetState extends State<MainWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        //backgroundColor: Color.fromARGB(255, 10, 38, 71),
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         // backgroundColor: Colors.grey[100],
-        title: RichText(
-          text: TextSpan(children: <TextSpan>[
-            TextSpan(
-                text: "Place",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 25,
-                    color: Colors.white)),
-            TextSpan(
-              text: "ment",
-              style: TextStyle(
-                fontSize: 25,
-                color: Colors.white,
+        // leading: InkWell(
+        //   child: Padding(
+        //     padding: EdgeInsets.all(5),
+        //     child: CircleAvatar(
+        //       backgroundImage: NetworkImage(
+        //           "https://media.licdn.com/dms/image/D4D03AQEV6Mfb7EABRA/profile-displayphoto-shrink_800_800/0/1663575014178?e=1686787200&v=beta&t=25cx2bRJQu997CO136FbMz9QMwEPUWdGldA825T4z7Q"),
+        //     ),
+        //   ),
+        //   onTap: () {},
+        // ),
+        title: Container(
+          width: double.infinity,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              RichText(
+                text: TextSpan(children: <TextSpan>[
+                  TextSpan(
+                      text: "Place",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          color: Color.fromARGB(255, 10, 38, 71))),
+                  TextSpan(
+                    text: "ment",
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Color.fromARGB(255, 32, 82, 149),
+                    ),
+                  ),
+                ]),
               ),
-            ),
-          ]),
+              InkWell(
+                  child: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        "https://media.licdn.com/dms/image/D4D03AQEV6Mfb7EABRA/profile-displayphoto-shrink_800_800/0/1663575014178?e=1686787200&v=beta&t=25cx2bRJQu997CO136FbMz9QMwEPUWdGldA825T4z7Q"),
+                  ),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => AccountPage()));
+                  }),
+            ],
+          ),
         ),
       ),
       body: _widgetOptions[widget._selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color.fromARGB(255, 10, 38, 71),
         type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home_outlined,
+              color: Color.fromARGB(255, 255, 255, 255),
+            ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.chat_bubble),
-            label: 'Chats',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.card_travel_rounded),
+            icon: Icon(
+              Icons.card_travel_rounded,
+              color: Color.fromARGB(255, 255, 255, 255),
+            ),
             label: 'Jobs',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.near_me_rounded),
+            icon: Icon(
+              Icons.near_me_outlined,
+              color: Color.fromARGB(255, 255, 255, 255),
+            ),
             label: 'Internship',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book),
+            icon: Icon(
+              Icons.book,
+              color: Color.fromARGB(255, 255, 255, 255),
+            ),
             label: 'Blog',
           ),
         ],
         currentIndex: widget._selectedIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white54,
         onTap: _onItemTapped,
       ),
     );

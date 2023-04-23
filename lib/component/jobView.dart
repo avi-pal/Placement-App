@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:placement/component/JobmodalWidget.dart';
 
 class JobView extends StatefulWidget {
   const JobView({super.key});
@@ -15,48 +16,16 @@ class _JobViewState extends State<JobView> {
     return Padding(
       padding: EdgeInsets.all(10),
       child: Card(
-        elevation: 20,
-        child: Padding(
-          padding: EdgeInsets.all(15),
+          elevation: 20,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+              JobDetails(),
               SizedBox(
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [JobPostAndCompanyLogo(), CompanyName()]),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Platform(),
-              SizedBox(
-                height: 15,
-              ),
-              StartingTimeAndDuration(),
-              SizedBox(
-                height: 15,
-              ),
-              Salary(),
-              SizedBox(
-                height: 30,
-              ),
-              JobType(),
-              SizedBox(
-                height: 10,
-              ),
-              Row(children: [
-                DateOfJobPostIcon(),
-                DateOfJobPost(),
-              ]),
-              SizedBox(
-                height: 20,
+                height: 5,
               ),
               ApplyButton()
             ],
-          ),
-        ),
-      ),
+          )),
     );
   }
 }
@@ -72,12 +41,18 @@ class _ApplyButtonState extends State<ApplyButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
+        margin: EdgeInsets.all(10),
         height: 30,
         width: double.infinity,
-        color: Colors.blue,
+        color: Color.fromARGB(255, 229, 190, 236),
         child: ElevatedButton(
-          onPressed: () {},
-          child: Text("Apply Now"),
+          onPressed: () {
+            _JobDetailsWidget(context);
+          },
+          child: Text(
+            "Apply Now",
+            style: TextStyle(fontSize: 20),
+          ),
         ));
   }
 }
@@ -284,18 +259,108 @@ class JobPostAndCompanyLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-      Expanded(
-          flex: 3,
-          child: Text(
-            "Software Developer Engineer",
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-          )),
-      Expanded(
-          child: Container(
+      Container(
+        width: 250,
+        child: Text(
+          "Software Development Engineer",
+          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        ),
+      ),
+      Container(
         height: 100,
         width: 100,
-        child: const Image(image: AssetImage("images/quizkit.jpg")),
-      )),
+        child: Image(image: AssetImage("images/quizkit.jpg")),
+      ),
     ]);
+  }
+}
+
+_JobDetailsWidget(context) {
+  showGeneralDialog(
+    context: context,
+    barrierDismissible: false, // should dialog be dismissed when tapped outside
+    barrierLabel: "Modal", // label for barrier
+    transitionDuration: Duration(
+        milliseconds:
+            200), // how long it takes to popup dialog after button click
+    pageBuilder: (_, __, ___) {
+      // your widget implementation
+      return Scaffold(
+          appBar: AppBar(
+              backgroundColor: Color.fromARGB(255, 229, 190, 236),
+              centerTitle: true,
+              leading: IconButton(
+                  icon: Icon(
+                    Icons.close,
+                    color: Color.fromARGB(255, 42, 47, 79),
+                  ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  }),
+              title: Text(
+                "Job Details",
+                style: TextStyle(
+                    color: Color.fromARGB(255, 42, 47, 79),
+                    fontFamily: 'Overpass',
+                    fontWeight: FontWeight.w900,
+                    fontSize: 25),
+              ),
+              elevation: 0.0),
+          backgroundColor: Colors.white,
+          body: JobModalWidget());
+    },
+  );
+}
+
+class JobDetails extends StatefulWidget {
+  const JobDetails({super.key});
+
+  @override
+  State<JobDetails> createState() => _JobDetailsState();
+}
+
+class _JobDetailsState extends State<JobDetails> {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          SizedBox(
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [JobPostAndCompanyLogo(), CompanyName()]),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Platform(),
+          SizedBox(
+            height: 15,
+          ),
+          StartingTimeAndDuration(),
+          SizedBox(
+            height: 15,
+          ),
+          Salary(),
+          SizedBox(
+            height: 30,
+          ),
+          JobType(),
+          SizedBox(
+            height: 10,
+          ),
+          Row(children: [
+            DateOfJobPostIcon(),
+            DateOfJobPost(),
+          ]),
+          // SizedBox(
+          //   height: 20,
+          // ),
+          // ApplyButton()
+        ],
+      ),
+    );
   }
 }
