@@ -16,8 +16,13 @@ class _ApplicationPageState extends State<ApplicationPage> {
       appBar: AppBar(
         title: Text(
           "Application",
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: Color.fromARGB(255, 42, 47, 79),
+          ),
         ),
+        backgroundColor: Color.fromARGB(255, 223, 141, 237),
       ),
       body: Padding(
           padding: EdgeInsets.all(15),
@@ -26,7 +31,7 @@ class _ApplicationPageState extends State<ApplicationPage> {
               SizedBox(
                 child: Text(
                   "Your Resume",
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
               ),
               SizedBox(
@@ -70,7 +75,7 @@ class _ApplicationPageState extends State<ApplicationPage> {
               SizedBox(
                 child: Text(
                   "Cover Letter",
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
               ),
               SizedBox(
@@ -80,7 +85,7 @@ class _ApplicationPageState extends State<ApplicationPage> {
                 child: Text(
                   "Why should you be hired for this role?",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 16,
                   ),
                 ),
               ),
@@ -109,7 +114,7 @@ class _ApplicationPageState extends State<ApplicationPage> {
               SizedBox(
                 child: Text(
                   "Your Availability",
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
               ),
               SizedBox(
@@ -120,7 +125,7 @@ class _ApplicationPageState extends State<ApplicationPage> {
                   "Confirm your Availability",
                   style: TextStyle(
                     color: Color.fromARGB(221, 48, 47, 47),
-                    fontSize: 25,
+                    fontSize: 20,
                   ),
                 ),
               ),
@@ -170,12 +175,13 @@ class _ApplicationPageState extends State<ApplicationPage> {
               Container(
                 color: Color.fromARGB(255, 229, 190, 236),
                 child: Padding(
-                  padding: EdgeInsets.all(15),
+                  padding: EdgeInsets.all(18),
                   child: Text(
                       "If an employer asks you to pay any security deposit,register fees or want any kind of money etc.do not pay.remember we doesn't charge a fee from students to apply to a job or internship & we don't allow other companies to do so either"),
                 ),
               ),
               Container(
+                alignment: Alignment.bottomRight,
                   width: double.infinity,
                   padding: EdgeInsets.all(10),
                   child: Row(
@@ -193,7 +199,8 @@ class _ApplicationPageState extends State<ApplicationPage> {
                                     fontSize: 25, fontWeight: FontWeight.bold),
                               )))
                     ],
-                  ))
+                  )
+                  )
             ],
           )),
     );

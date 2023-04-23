@@ -98,13 +98,13 @@ class _HomePageState extends State<HomePage> {
             // ),
             Container(
               color: Color.fromARGB(255, 172, 212, 245),
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(20),
               child: Align(
                 alignment: Alignment.topCenter,
                 child: Text(
-                  "Job ke liye no fikar",
+                  "Everyone will get the Job",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 25,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -118,7 +118,7 @@ class _HomePageState extends State<HomePage> {
               alignment: Alignment.center,
               child: Text(
                 "Internships",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
               ),
             ),
             SizedBox(
@@ -128,7 +128,7 @@ class _HomePageState extends State<HomePage> {
               alignment: Alignment.center,
               child: Text(
                 "Apply to 10,000+ internships for free",
-                style: TextStyle(fontSize: 21),
+                style: TextStyle(fontSize: 17),
               ),
             ),
             SizedBox(
@@ -140,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                 "POPULAR CITIES",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                    fontSize: 18,
                     color: Colors.grey),
               ),
             ),
@@ -152,8 +152,8 @@ class _HomePageState extends State<HomePage> {
                 child: ListView.builder(
                     itemBuilder: (context, index) {
                       return Container(
-                        height: 200.0,
-                        width: 150.0,
+                        height: 170.0,
+                        width: 130.0,
                         margin: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           border: Border.all(
@@ -193,7 +193,7 @@ class _HomePageState extends State<HomePage> {
                 "POPULAR CATEGORIES",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                    fontSize: 18,
                     color: Colors.grey),
               ),
             ),
@@ -205,8 +205,8 @@ class _HomePageState extends State<HomePage> {
                 child: ListView.builder(
                     itemBuilder: (context, index) {
                       return Container(
-                        height: 200.0,
-                        width: 150.0,
+                        height: 170.0,
+                        width: 130.0,
                         margin: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           border: Border.all(

@@ -23,7 +23,7 @@ class _PostState extends State<Post> {
               CircleAvatar(
                 radius: 20,
                 backgroundImage: NetworkImage(
-                    "https://media.licdn.com/dms/image/D4D03AQEV6Mfb7EABRA/profile-displayphoto-shrink_800_800/0/1663575014178?e=1686787200&v=beta&t=25cx2bRJQu997CO136FbMz9QMwEPUWdGldA825T4z7Q"),
+                    "https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png"),
               ),
               SizedBox(
                 width: 10,

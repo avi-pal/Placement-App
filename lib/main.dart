@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:placement/component/main_widget.dart';
-import 'package:placement/pages/Job/job_page.dart';
-import 'package:placement/pages/account/account_page.dart';
+
+// ignore: unused_import
 import 'package:placement/pages/home/home_page.dart';
 import 'dart:async';
 

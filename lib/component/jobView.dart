@@ -40,20 +40,27 @@ class ApplyButton extends StatefulWidget {
 class _ApplyButtonState extends State<ApplyButton> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        margin: EdgeInsets.all(10),
-        height: 30,
-        width: double.infinity,
-        color: Color.fromARGB(255, 229, 190, 236),
-        child: ElevatedButton(
-          onPressed: () {
-            _JobDetailsWidget(context);
-          },
-          child: Text(
-            "Apply Now",
-            style: TextStyle(fontSize: 20),
-          ),
-        ));
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Container(
+            margin: EdgeInsets.fromLTRB(10, 0, 20, 10),
+            height: 40,
+            color: Color.fromARGB(255, 229, 190, 236),
+            child: ElevatedButton(
+              onPressed: () {
+                _JobDetailsWidget(context);
+              },
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                child: Text(
+                  "Apply Now",
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ))
+      ]
+    );
   }
 }
 
@@ -260,7 +267,7 @@ class JobPostAndCompanyLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
       Container(
-        width: 250,
+        width: 175,
         child: Text(
           "Software Development Engineer",
           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),

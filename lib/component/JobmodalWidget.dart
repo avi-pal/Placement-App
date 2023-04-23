@@ -140,7 +140,7 @@ class _JobModalWidgetState extends State<JobModalWidget> {
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              color: Colors.grey,
+                              color: Color.fromARGB(255, 241, 90, 89),
                             ),
                             padding: EdgeInsets.only(
                                 top: 5, bottom: 5, left: 10, right: 10),
@@ -158,7 +158,7 @@ class _JobModalWidgetState extends State<JobModalWidget> {
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              color: Colors.grey,
+                              color: Color.fromARGB(255, 241, 90, 89),
                             ),
                             padding: EdgeInsets.only(
                                 top: 5, bottom: 5, left: 10, right: 10),
@@ -176,7 +176,7 @@ class _JobModalWidgetState extends State<JobModalWidget> {
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              color: Colors.grey,
+                              color: Color.fromARGB(255, 241, 90, 89),
                             ),
                             padding: EdgeInsets.only(
                                 top: 5, bottom: 5, left: 10, right: 10),
@@ -194,7 +194,7 @@ class _JobModalWidgetState extends State<JobModalWidget> {
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              color: Colors.grey,
+                              color: Color.fromARGB(255, 241, 90, 89),
                             ),
                             padding: EdgeInsets.only(
                                 top: 5, bottom: 5, left: 10, right: 10),

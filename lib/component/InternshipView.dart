@@ -43,20 +43,27 @@ class ApplyButton extends StatefulWidget {
 class _ApplyButtonState extends State<ApplyButton> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        margin: EdgeInsets.all(10),
-        height: 30,
-        width: double.infinity,
-        color: Color.fromARGB(255, 229, 190, 236),
-        child: ElevatedButton(
-          onPressed: () {
-            _internshipDetailsWidget(context);
-          },
-          child: Text(
-            "Apply Now",
-            style: TextStyle(fontSize: 20),
-          ),
-        ));
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Container(
+            margin: EdgeInsets.fromLTRB(10, 0, 20, 10),
+            height: 40,
+            color: Color.fromARGB(255, 229, 190, 236),
+            child: ElevatedButton(
+              onPressed: () {
+                _internshipDetailsWidget(context);
+              },
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                child: Text(
+                  "Apply Now",
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ))
+      ]
+    );
   }
 }
 
@@ -263,7 +270,7 @@ class JobPostAndCompanyLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
       Container(
-        width: 250,
+        width: 175,
         child: Text(
           "Flutter Development",
           style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
@@ -344,12 +351,12 @@ _internshipDetailsWidget(context) {
       // your widget implementation
       return Scaffold(
           appBar: AppBar(
-              backgroundColor: Colors.blue,
+              backgroundColor: Color.fromARGB(255, 229, 190, 236),
               centerTitle: true,
               leading: IconButton(
                   icon: Icon(
                     Icons.close,
-                    color: Colors.white,
+                    color: Color.fromARGB(255, 42, 47, 79),
                   ),
                   onPressed: () {
                     Navigator.pop(context);
@@ -357,7 +364,10 @@ _internshipDetailsWidget(context) {
               title: Text(
                 "Internship Details",
                 style: TextStyle(
-                    color: Colors.white, fontFamily: 'Overpass', fontSize: 20),
+                    color: Color.fromARGB(255, 42, 47, 79),
+                    fontFamily: 'Overpass',
+                    fontWeight: FontWeight.w900,
+                    fontSize: 25),
               ),
               elevation: 0.0),
           backgroundColor: Colors.white,
