@@ -260,7 +260,7 @@ class JobPostAndCompanyLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
       Container(
-        width: 250,
+        width: 175,
         child: Text(
           "Software Development Engineer",
           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),

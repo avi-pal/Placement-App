@@ -263,7 +263,7 @@ class JobPostAndCompanyLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
       Container(
-        width: 250,
+        width: 175,
         child: Text(
           "Flutter Development",
           style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),

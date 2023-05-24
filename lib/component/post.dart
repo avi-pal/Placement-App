@@ -43,9 +43,9 @@ class _PostState extends State<Post> {
             ],
           )),
       Image.network(
-        "https://media.licdn.com/dms/image/D4D22AQGJ6Sx9tSeFtA/feedshare-shrink_800/0/1680928532191?e=1683763200&v=beta&t=AIMehHRHT-Tqwhp6zrnmr-7O0PhyVkQzmuyIBv2JjLc",
+        "https://media.licdn.com/dms/image/D4D22AQFVBAVj1LOHcg/feedshare-shrink_800/0/1683872422368?e=1686787200&v=beta&t=uFmQN4JhBC9_wBn3kaypSOE24gVizNuujC3en-uNHYw",
         width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height / 2,
+        height: MediaQuery.of(context).size.height / 3,
       ),
       // SizedBox(
       //   height: 5,
