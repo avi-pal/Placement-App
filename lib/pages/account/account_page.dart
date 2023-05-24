@@ -77,7 +77,7 @@ class _AccountPageState extends State<AccountPage> {
                       Align(
                           alignment: Alignment.topLeft,
                           child: Text(
-                            " " + "AVIRUP PAL",
+                            " " + "Superman",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 35,
@@ -108,7 +108,7 @@ class _AccountPageState extends State<AccountPage> {
                         Align(
                             alignment: Alignment.topLeft,
                             child: Text(
-                              "avirup150@gmail.com",
+                              "superman150@gmail.com",
                               style: TextStyle(
                                   fontWeight: FontWeight.w400, fontSize: 18),
                             ))
@@ -132,7 +132,7 @@ class _AccountPageState extends State<AccountPage> {
                         Align(
                             alignment: Alignment.topLeft,
                             child: Text(
-                              "9163318729",
+                              "91157663318",
                               style: TextStyle(
                                   fontWeight: FontWeight.w400, fontSize: 18),
                             ))
