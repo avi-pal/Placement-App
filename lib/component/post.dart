@@ -43,7 +43,7 @@ class _PostState extends State<Post> {
             ],
           )),
       Image.network(
-        "https://media.licdn.com/dms/image/D4D22AQFVBAVj1LOHcg/feedshare-shrink_800/0/1683872422368?e=1686787200&v=beta&t=uFmQN4JhBC9_wBn3kaypSOE24gVizNuujC3en-uNHYw",
+        "https://i.insider.com/60706ab6f068cf0018022bfd?width=700",
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height / 3,
       ),
